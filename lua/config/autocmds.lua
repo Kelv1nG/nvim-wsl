@@ -14,3 +14,4 @@ end
 set_autoformat({ "php" }, false)
 set_autoformat({ "python" }, true)
 set_autoformat({ "go" }, true)
+set_autoformat({ "dart" }, true)
