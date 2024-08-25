@@ -6,3 +6,9 @@ vim.keymap.set("n", "\\", "<C-w>", {
   desc = "Show window menu",
   remap = true,
 })
+
+vim.keymap.set("n", "<leader>d", function()
+  vim.lsp.buf.clear_references()
+  vim.lsp.buf.document_highlight()
+  vim.diagnostic.show()
+end, { desc = "Refresh diagnostics" })
