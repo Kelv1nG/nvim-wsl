@@ -1,19 +1,23 @@
 return {
-  -- add gruvbox
   {
-    "ellisonleao/gruvbox.nvim",
+    "tokyonight.nvim",
+    lazy = true,
     priority = 1000,
-    config = true,
-    opts = {
-      transparent_mode = true,
-    },
+    opts = function()
+      return {
+        transparent = true,
+        styles = {
+          sidebars = "transparent",
+          floats = "transparent",
+        },
+      }
+    end,
   },
 
-  -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = "tokyonight",
     },
   },
 }
